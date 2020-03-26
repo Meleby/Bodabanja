@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Login V3</title>
+	<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+	<link rel="stylesheet" href="bootstrap/css/customerReg.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+		<a class="navbar-brand" href="#">Navbar</a>
+		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+		  <span class="navbar-toggler-icon"></span>
+		</button>
+		<div class="collapse navbar-collapse" id="navbarNavDropdown">
+		  <ul class="navbar-nav">
+			<li class="nav-item active">
+			  <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+			</li>
+			<li class="nav-item">
+			  <a class="nav-link" href="#">Pricing</a>
+			</li>
+			<li class="nav-item">
+			  <a class="nav-link" href="#">About us</a>
+			</li>
+			<li class="nav-item dropdown">
+			  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+				Select role
+			  </a>
+			  <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+				<a class="dropdown-item" href="#">Admin</a>
+				<a class="dropdown-item" href="#">Sales Person</a>
+				<a class="dropdown-item" href="#">Supervisor</a>
+			  </div>
+			</li>
+          </ul>
+    	</div>
+	  </nav>
+	
+	
+	<div class="limiter">
+		<div>
+			<div>
+				<form name="customer" method="POST" action="/saveCustomer">
+                    <fieldset>
+                        <legend>Customer Details:</legend>
+
+                        <div id="fullName_div">
+                          <label>Full name:</label>
+                          <input type="text" id="fullName" name="fullName">
+                          <div id="fullName_error"></div>
+                        </div>
+
+                        <div id="dob_div">
+                          <label>Date of Birth:</label>
+                          <input type="date" id="dob" name="dob">
+                          <div id="dob_error"></div>
+                        </div>                       
+                        
+                        <div id="contact_div">
+                          <label>Phone Number:</label>
+                          <input type="string" id="contact" name="contact">      
+                          <div id="contact_error"></div>        
+                        </div>
+
+                        <div id="nationality_div">
+                          <label>Nationality:</label>
+                          <input type="text" id="nationality" name="nationality">    
+                          <div id="nationality_error"></div>                    
+                        </div>
+
+                        <div id="maritalStatus_div">
+                          <label>Marital Status</label><br>
+                          <div class="radio">
+                            <input type="radio" name="maritalStatus" class="radio1" value="Single">Single &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            <input type="radio" name="maritalStatus" class="radio1" value="Married">Married<br>
+                          </div>
+                        </div>
+                        
+                        <div id="stageName_div">
+                          <label>Stage Name:</label>
+                          <input type="text" id="stageName" name="stageName">
+                          <div id="stageName_error"></div>
+                        </div>
+                        
+                        <div id="lc_div">
+                          <label>LC confirmation:</label>
+                          <input type="checkbox" name="lc1"  value="lc1">LC1 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                          <input type="checkbox" name="lc3"  value="lc3">LC3<br>
+                          <div id="lc_error"></div>
+                        </div>
+                        
+                        <div id="otherLoans_div"> 
+                          <label>Other Loans:</label>
+                          <input type="checkbox" id="yes" value="yes">
+                          <input type="checkbox" id="no" value="no">
+                          <div id = "otherLoans_div"></div>
+                        </div>                      
+                    </fieldset>
+            
+                    <fieldset>
+                        <legend>Referee Details:</legend>
+
+                        <div id="refereeName_div">
+                          <label>Name:</label>
+                          <input type="refereeName" name="refereeName">
+                          <div id="refereeName_error"></div>                        
+                        </div>
+
+                        <div id="refereeDob_div">
+                          <label>Date of Birth:</label>
+                          <input type="text" id="refereeDoB" name="refereeDoB">
+                          <div id="refereeDob_error"></div>
+                        </div>
+
+                        <div id="refereeOccupation_div">
+                          <label>Occupation:</label>
+                          <input type="text" id="refereeOccupation" name="refereeOccupation">
+                          <div id="refereeOccupation_error"></div>                    
+                        </div>
+
+                        </fieldset>                      
+                    
+            
+                    <fieldset>
+
+                        <legend>Loan Details:</legend>
+
+                        <div id="vehicle_div">
+                          <label>Vehicle:</label>
+                          <input type="text" name="vehicle">
+                          <div id="vehicle_error"></div>                       
+                        </div>
+
+                        <div id="downPayment_div">
+                          <label>Down Payment:</label>
+                          <input type="text" id="downPayment" name="downPayment">
+                          <div id="downPayment_error"></div>
+                        </div>
+
+                        <div id="todayDate_div">
+                          <label>Current Date</label>
+                          <input type="date" id="todayDate" name="todayDate">
+                          <div id="todayDate_error"></div>
+                        </div>
+                                 
+                    </fieldset>
+
+                    <button type="submit" class="login100-form-btn">Submit</button>
+                    <button type="reset" class="login100-form-btn">Cancel</button>
+              
+				</form>
+			</div>
+		</div>
+	</div>
+	
+
+
+</body>
+</html>

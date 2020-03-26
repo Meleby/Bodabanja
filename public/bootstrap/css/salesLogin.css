@@ -1,0 +1,40 @@
+#wrapper {
+    width: 40%;
+    margin: 50px auto;
+    padding: 50px;
+    padding-top: 35px;
+    background: #D7FBFF;
+  }
+  form {
+    margin: 30px auto;
+  }
+  .textInput {
+    border: none;
+    height: 35px;
+    margin: 2px;
+    border: 1px solid #6B7363;
+    font-size: 1.2em;
+    padding: 5px;
+    width: 95%;
+  }
+  .textInput:focus {
+    outline: none;
+  }
+  .btn {
+    width: 95.6%;
+    border: none;
+    margin-top: 5px;
+    color: white;
+    background-color: #3b5998;
+    border-radius: 5px;
+    padding: 12px;
+  }
+  label{
+      margin-bottom: 0.1rem;
+  }
+  .bg-light {
+    background-color: rgb(3, 126, 34)!important;
+}
+h3{
+    text-align: center;
+}
