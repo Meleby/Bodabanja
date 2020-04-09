@@ -1,3 +1,100 @@
 .bg-light {
     background-color: rgb(3, 126, 34)!important;
 }
+.td{
+    text-align: center;
+}
+
+#formBorder{
+    border: 2px solid black;
+    border-radius: 5px;
+    
+}
+
+form{
+    max-width: 900px;
+    margin: 0px auto;
+    
+}
+.limiter{
+    
+    
+    background-image: url("/bg-01.jpg");
+    
+}
+#wrapper{
+    padding-top: 4px;   
+    background-color: rgba(255,255,255,0.9);
+}
+
+#submit{
+    margin-left: 380px;
+    margin-bottom: 5px;
+}
+#vehicle_div{
+    width: 200px;
+    padding-left: 15px;
+    padding-right: 340px;
+}
+
+fieldset {
+    margin: 5px;    
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 10px;
+}
+body{
+    font-size: 0.99rem;
+}
+.table th {
+    padding: 0px;
+    width: auto;
+    text-align: left;
+    border-top: 1px solid #dee2e6;
+}
+
+
+legend {
+    width: 23%;
+    padding-left: 2px;
+}
+#occupationLabel{
+    padding-left: 10px;
+    width: 195px;
+}
+#refereeLegend {
+    width:auto;
+}
+
+#loanLegend {
+    width: auto;
+}
+#single{
+    width: 15px;
+    margin-left: 13px;
+}
+
+#lc1, #lc3, #yes, #no{
+    width: 15px;
+    margin-left: 13px;
+}
+#stage{
+    padding-left: 170px;
+    width: 355px;
+}
+#customerLegend{
+    width: auto;
+}
+
+
+#married{
+    width: 15px;
+}
+
+label{
+    padding-left: 15px;
+    width: 200px;
+}
+input{
+    width: 150px;
+}

@@ -2,3 +2,24 @@
     background-color: rgb(3, 126, 34)!important;
     
 }
+
+.limiter{
+    background-image: url("/bg-01.jpg");    
+}
+h3{
+    text-align: center;
+}
+.container{
+    background-color:  rgba(255,255,255,0.9);
+    width: 100%;
+    margin-right: 0px;
+    margin-left: 0px;
+    max-width: initial;   
+    
+}
+form{
+    max-width: 900px;
+    margin: 0px auto;
+    
+}
+

@@ -3,6 +3,7 @@ const router = express.Router();
 const SalesPerson = require('../models/userModel')
 const Customer = require('../models/customerModel')
 const path = require('path')
+const bcrypt = require('bcryptjs')
 
 
 router.get('/adminLogin', (req, res) => {
@@ -14,7 +15,7 @@ router.get('/salesPersonReg', (req, res) => {
 })
 router.get('/salesLogin', (req, res) => {
     res.sendFile(path.join(__dirname,'../views', '/salesLogin.html'))
-})
+}) 
 router.get('/customerReg', (req, res) => {
     res.sendFile(path.join(__dirname, '../views', '/customerReg.html'))
 })
@@ -43,14 +44,22 @@ router.get("/customerList", async(req, res) => {
     }
 });
 
-
-
 //SALES PERSON ROUTES
-router.post("/saveSalesPerson", async(req, res) => {
+router.post("/saveSalesPerson", (req, res) => {
     try {
-        var myData = new SalesPerson(req.body);        
-        await myData.save()
-        console.log(myData)
+        var myData = new SalesPerson(req.body);
+        bcrypt.genSalt(10, (err, salt) =>{
+            bcrypt.hash(myData.password, salt, function(err, hash){
+                if(err){
+                    console.log(err);
+                }
+                myData.password = hash;
+                myData.save()
+                console.log(myData)
+        
+            })
+        })        
+        
         console.log('Item has been saved')
         res.redirect('/salesPeopleList')
 
@@ -72,7 +81,6 @@ router.get("/salesPeopleList", async(req, res) => {
 
 
 //CUSTOMER ROUTES
-
 
 module.exports = router;
 

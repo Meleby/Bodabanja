@@ -3,18 +3,56 @@ html
     head
         //link(rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous")
         link(rel="stylesheet" href="bootstrap/css/bootstrap.min.css")
+        link(rel="stylesheet" href="bootstrap/css/customerReg.css")
         title List of Customers
     body
-        h1 List of Customers
-            
+        nav.navbar.navbar-expand-lg.navbar-light.bg-light
+            a.navbar-brand(href="#") BB-Banja
+            button.navbar-toggler(type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation")
+                span.navbar-toggler-icon
+            #navbarNavDropdown.collapse.navbar-collapse
+                ul.navbar-nav
+                    li.nav-item.active
+                        a.nav-link(href="#")
+                            | Home 
+                            span.sr-only (current)
+                    li.nav-item
+                        a.nav-link(href="#") Pricing
+                    li.nav-item
+                        a.nav-link(href="#") About us
+                    li.nav-item.dropdown
+                        a#navbarDropdownMenuLink.nav-link.dropdown-toggle(href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false")
+                            | Select role
+                    .dropdown-menu(aria-labelledby="navbarDropdownMenuLink")
+                        a.dropdown-item(href="#") Admin
+                        a.dropdown-item(href="#") Sales Person
+                        a.dropdown-item(href="#") Supervisor
+
         table.table
             thead.thead-dark
                 tr
-                    th Full Name
+                    th First Name
+                    th Last Name
+                    th Contact
+                    th Nationality
+                    th Date of Birth
+                    th NIN
+                    th Stage Name
+                    th Vehicle
+                    th Down Payment
+                    
                     
             tbody
                 each customer in customers
                     tr
-                        td #{customer.fullName}
+                        td #{customer.firstName}
+                        td #{customer.lastName}
+                        td #{customer.contact}
+                        td #{customer.nationality}
+                        td #{customer.dob}
+                        td #{customer.nin}
+                        td #{customer.stageName}
+                        td #{customer.vehicleType}
+                        td #{customer.downPayment}
                         
                         
