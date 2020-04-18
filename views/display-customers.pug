@@ -7,7 +7,8 @@ html
         title List of Customers
     body
         nav.navbar.navbar-expand-lg.navbar-light.bg-light
-            a.navbar-brand(href="#") BB-Banja
+            a.navbar-brand(href="#")
+                strong BB-Banja
             button.navbar-toggler(type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation")
                 span.navbar-toggler-icon
             #navbarNavDropdown.collapse.navbar-collapse
@@ -20,13 +21,7 @@ html
                         a.nav-link(href="#") Pricing
                     li.nav-item
                         a.nav-link(href="#") About us
-                    li.nav-item.dropdown
-                        a#navbarDropdownMenuLink.nav-link.dropdown-toggle(href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false")
-                            | Select role
-                    .dropdown-menu(aria-labelledby="navbarDropdownMenuLink")
-                        a.dropdown-item(href="#") Admin
-                        a.dropdown-item(href="#") Sales Person
-                        a.dropdown-item(href="#") Supervisor
+                    
 
         table.table
             thead.thead-dark
@@ -54,5 +49,6 @@ html
                         td #{customer.stageName}
                         td #{customer.vehicleType}
                         td #{customer.downPayment}
+        footer.fixed-bottom(style ="text-align: center; padding-top: 90px;") &copy;Banja2020
                         
                         

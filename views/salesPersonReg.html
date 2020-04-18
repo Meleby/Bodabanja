@@ -7,9 +7,10 @@
   <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
   <link rel="stylesheet" href="bootstrap/css/salesPersonReg.css">
 </head>
+
 <body onload="document.registration.firstName.focus();">
   <nav class="navbar navbar-expand-lg navbar-light bg-light">
-		<a class="navbar-brand" href="#">BBB</a>
+		<a class="navbar-brand" href="#"><strong>BB-Banja</strong></a>
 		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
 		  <span class="navbar-toggler-icon"></span>
 		</button>
@@ -19,26 +20,21 @@
 			  <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
 			</li>
 			<li class="nav-item">
-			  <a class="nav-link" href="#">Customers</a>
+        <form action="/customerList" method = "GET">
+          <input type="submit" value="Customers" style="background:none; color:inherit; border: none; padding: 0; padding-top: 8px; font: inherit; cursor: pointer; outline: inherit;">
+        </form>
+			  
 			</li>
 			<li class="nav-item">
-			  <a class="nav-link" href="#">Sales People</a>
+			  <form action="/salesPeopleList" method = "GET">
+          <input type="submit" value="Sales People" style="background:none; color:inherit; border: none; padding: 0; padding-top: 8px; padding-left: 10px; font: inherit; cursor: pointer; outline: inherit;">
+        </form>
 			</li>
-			<li class="nav-item dropdown">
-			  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-				Select role
-			  </a>
-			  <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-				<a class="dropdown-item" href="#">Admin</a>
-				<a class="dropdown-item" href="#">Sales Person</a>
-				<a class="dropdown-item" href="#">Supervisor</a>
-			  </div>
-			</li>
+			
 		  </ul>
 		</div>
 	  </nav>
   
-	
 	<div class="limiter">
 		<div class="container">
 			<div class="wrap-login100">
@@ -119,20 +115,22 @@
                       <input type="date" class="form-control" id="todayDate" name="todayDate">
                       <div id="todayDate_error"></div>
                     </div>                        
-
                   </div>
-                  <div class="container-login100-form-btn">
-                    <button type="submit">Submit</button>
-                    <button type = "reset" class="login100-form-btn">Cancel</button>
+                  <div class="container-login100-form-btn" style="text-align: center;">
+                    <button type="submit" class="btn btn-success">Submit</button>
+                    <button type = "reset" class="login100-form-btn btn btn-danger">Cancel</button>
                 </div>
     
 
               </div>
               
 				</form>
-			</div>
-		</div>
+      </div>
+      <footer style="text-align: center;padding: 25px;background-color: rgba(255,255,255,0.9); ">&copy;Banja2020</footer>
+  
+    </div>
+    
   </div>
   <script src="js/salesPersonReg.js"></script> 
-</body>
+  </body>
 </html>
