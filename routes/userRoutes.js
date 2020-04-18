@@ -1,12 +1,12 @@
 const express = require('express')
 const router = express.Router();
-const SalesPerson = require('../models/userModel')
+const SalesPerson = require('../models/salesModel')
 const Customer = require('../models/customerModel')
 const path = require('path')
 const bcrypt = require('bcryptjs')
 
 
-router.get('/adminLogin', (req, res) => {
+router.get('/', (req, res) => {
     res.sendFile(path.join(__dirname, '../views', 'adminLogin.html'));
 })
 

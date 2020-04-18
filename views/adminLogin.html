@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<title>Login Sales Person</title>
+	<title>Login Administrator</title>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
@@ -9,7 +9,7 @@
 </head>
 <body>
 	<nav class="navbar navbar-expand-lg navbar-light bg-light">
-		<a class="navbar-brand" href="#">Navbar</a>
+		<a class="navbar-brand" href="#"><strong>BB-Banja</strong></a>
 		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
 		  <span class="navbar-toggler-icon"></span>
 		</button>
@@ -24,23 +24,14 @@
 			<li class="nav-item">
 			  <a class="nav-link" href="#">About us</a>
 			</li>
-			<li class="nav-item dropdown">
-			  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-				Select role
-			  </a>
-			  <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-				<a class="dropdown-item" href="#">Admin</a>
-				<a class="dropdown-item" href="#">Sales Person</a>
-				<a class="dropdown-item" href="#">Supervisor</a>
-			  </div>
-			</li>
+			
 		  </ul>
 		</div>
 	  </nav>
 	  
 	<div id="wrapper">
 				
-		<form method="POST" action="index.php" onsubmit="return Validate()" name="vform" >
+		<form method="GET" action="/salesPersonReg" onsubmit="return Validate()" name="vform" >
 			<h3>ADMINISTRATOR</h3>
 			
 			<div id="email_div">
@@ -53,12 +44,14 @@
 			  <input type="password" name="password" class="textInput">
 			  <div id="password_error"></div>
 			</div>
-			
 			<div>
-			<input type="submit" name="register" value="Login" class="btn">
+			<input type="submit" style="margin-bottom: 15px;" name="register" value="Login" class="btn">
 			</div>
+			<a href="#" style="color: none; font-size: 0.9rem;"><i>Forgot Password?</i></a><br>
+			<a href="salesLogin" style="color: none; font-size: 0.9rem;"><i>Sales Person?</i></a>
 		</form>
 	</div>
-	<script src="js/adminLogin.js"></script> 
+	<script src="js/adminLogin.js"></script>
+	<footer style="text-align: center;">&copy;Banja2020</footer> 
 </body>
 </html>
